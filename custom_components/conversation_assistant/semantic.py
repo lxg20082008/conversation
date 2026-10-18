@@ -74,7 +74,8 @@ class Semantic():
 
             if entity.aliases:
                 for alias in entity.aliases:
-                    _list.append(alias)
+                    if isinstance(alias, str):
+                        _list.append(alias)
         return _list
 
     # 完全匹配
