@@ -272,7 +272,7 @@ class Semantic():
             }
 
     def parser_match(self, text, find):
-        matchObj = re.match(rf'(.*)({find})(.*)', text)
+        matchObj = re.match(rf'(.*?)({find})(.*)', text)
         if matchObj is not None:
             result = (matchObj.group(1), matchObj.group(2), matchObj.group(3))
             _LOGGER.debug(result)
